@@ -1,0 +1,56 @@
+FROM jdinius/cpp-base-env:1.0
+
+#### UPDATE BEFORE REMAINDER
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils apt-transport-https ca-certificates \
+    gnupg software-properties-common wget
+
+#### pull latest cmake from kitware
+RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
+RUN apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+
+RUN apt-get update && apt-get install -y \
+  cmake \
+  clang-12 \
+  clang-tidy \
+  libgoogle-glog-dev \
+  libgflags-dev \
+  libatlas-base-dev \
+  libeigen3-dev \
+  libsuitesparse-dev \
+  libpython3-dev \
+  python3-pip \
+  python3-tk \
+  git \
+  && apt-get clean
+
+RUN pip3 install numpy matplotlib
+
+RUN wget http://ceres-solver.org/ceres-solver-2.0.0.tar.gz \
+  && tar xvf ceres-solver-2.0.0.tar.gz \
+  && rm ceres-solver-2.0.0.tar.gz \
+  && cd ceres* \
+  && mkdir build \
+  && cd build \
+  && cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=native" \
+  && make -j6 \
+  && make install
+
+RUN git clone https://github.com/artivis/manif \
+  && cd manif \
+  && git checkout 0.0.4 \
+  && mkdir build \
+  && cd build \
+  && cmake .. \
+  && make \
+  && make install
+
+# matplotlib-cpp has no tags, so use latest commit (as of 4 Mar 2022)
+RUN git clone https://github.com/lava/matplotlib-cpp.git \
+      && cd matplotlib-cpp \
+      && git checkout ef0383f1315d32e0156335e10b82e90b334f6d9f \
+      && mkdir build \
+      && cd build \
+      && cmake .. \
+      && make \
+      && make install
+
