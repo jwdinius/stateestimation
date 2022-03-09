@@ -17,13 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3050cb80-3db6-40c2-a15f-dc01cf131651" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/DockerSetup.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/StereoCamera/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/StereoCamera/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/StereoCamera/StereoCamera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/StereoCamera/StereoCamera.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +78,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -90,12 +86,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.StereoCamera">
-    <configuration name="StateEstimation" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="RelWithDebInfo" RUN_TARGET_PROJECT_NAME="StateEstimation" RUN_TARGET_NAME="StateEstimationExec" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="StateEstimation" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="StateEstimation" RUN_TARGET_NAME="StateEstimationExec" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StereoCamera" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="true" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="StateEstimation" TARGET_NAME="StereoCamera" CONFIG_NAME="RelWithDebInfo" RUN_TARGET_PROJECT_NAME="StateEstimation" RUN_TARGET_NAME="StereoCamera">
+    <configuration name="StereoCamera" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="true" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="StateEstimation" TARGET_NAME="StereoCamera" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="StateEstimation" RUN_TARGET_NAME="StereoCamera">
       <envs>
         <env name="MPLCONFIGDIR" value="/tmp" />
       </envs>
@@ -227,6 +223,8 @@
       <workItem from="1646415618420" duration="130000" />
       <workItem from="1646415757084" duration="136000" />
       <workItem from="1646415894859" duration="17179000" />
+      <workItem from="1646605613577" duration="310000" />
+      <workItem from="1646606175324" duration="6296000" />
     </task>
     <servers />
   </component>
